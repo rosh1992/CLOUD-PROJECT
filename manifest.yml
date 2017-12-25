@@ -1,0 +1,10 @@
+---
+applications:
+- name: webcloud
+  instances: 1
+  memory: 128M
+  disk_quota: 256MB
+  buildpack: python_buildpack
+  command: python manage.py collectstatic --noinput && gunicorn mysite.wsgi:application
+  services:
+  - cf-django-pgsql

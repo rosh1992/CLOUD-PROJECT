@@ -1,0 +1,9 @@
+{% extends "personal/header.html" %} {% block content %}
+<h3>
+    <font color="green">{{post.title}}</font>
+</h3>
+<h6>
+    <font color="grey">on {{post.date}}</font>
+</h6>
+<font color="white">{{post.body|safe|linebreaks}}</font>
+{% endblock %}
